@@ -1,0 +1,84 @@
+洗牌css
+
+#gla{margin:0 auto;position:relative;height:404px;overflow:hidden;}
+#gla_box{width:600px;margin:auto;position:relative;z-index:2;}
+#gla_box .prev,#gla_box .next{display:block;z-index:2;overflow:hidden;cursor:pointer;position:absolute;width:52px;height:52px;top:131px;}
+#gla_box .prev{background:url(/statics/images/xipai/btn.png) left bottom no-repeat;left:-155px}
+#gla_box .next{background:url(/statics/images/xipai/btn.png) right bottom no-repeat;right:-140px} 
+#gla_box .prev:hover{background-position:left top;}
+#gla_box .next:hover{background-position:right top;}
+.gla_inbox{overflow:hidden;position:relative;}
+.gla_inbox p{text-indent:1em;font-size:14px;width:100%;color:#FFFFFF;line-height:30px;background:#000000;}
+.gla_inbox a{padding:5px; display:block; position:absolute; top:220px; left:90px; background:#0066CC; color:#FFF;}
+.gla_inbox img{width:487px;height:254px;z-index:2;}
+.roundabout-holder{height:200px;width:600px;}
+.roundabout-moveable-item{display:block;height:255px;width:487px;top:43px;cursor:pointer;}
+.roundabout-in-focus{cursor:auto;}
+
+/* 幼儿园（家长服务）开始*/
+.fuwu-cont{width:100%;margin:0 auto;top:0px;overflow: hidden;}
+.fuwu-1 {background:url(/statics/images/youeryuan/fuwu-1.jpg) center repeat-x;width:1352px;height:602px;padding-top:200px;position:relative;z-index:0;}
+
+.fuwu-2 .fuwu-div {width: 960px; height:470px; margin:0 auto;}
+.fuwu-2 .fuwu-div h2{font-size:36px;text-align:center;margin-bottom:30px;color:#3B5475}
+.fuwu-2 .fuwu-txt{float:left; height: 335px; width:360px; color:#666; font-size:14px; display: inline-block;line-height:20px;font-size:14px;}
+.fuwu-2 .fuwu-img {background:url(/statics/images/youeryuan/fuwu-2.png) no-repeat;width: 563px;height: 335px;display: inline-block;}
+.fuwu-3 { background-color: #F2F2F2; padding-top: 20px;}
+.fuwu-3 .kcsz p{width:760px; margin:0 auto;color:#666; line-height:20px;font-size:14px;}
+.fuwu-3 .kcsz h2{font-size:36px;text-align:center;margin-bottom:20px;color:#3B5475}
+/* 幼儿园（家长服务）结束*/
+
+<!--Jquery洗牌效果开始-->
+<script type="text/javascript" src="http://www.pkucollege.com/statics/js/pkunew/xipai/jquery.corner.js"></script>
+<script type="text/javascript" src="http://www.pkucollege.com/statics/js/pkunew/xipai/jquery.roundabout.js"></script>
+<script type="text/javascript" src="http://www.pkucollege.com/statics/js/pkunew/xipai/jquery.roundabout-shapes.js"></script>
+<!--顶部广告-->  
+<script type="text/javascript">
+$(function(){  
+    $('.gla_inbox').corner('8px');
+    $('#gla_box>ul').roundabout({
+        minOpacity:1,
+        btnNext: ".next",
+        duration: 1000,
+        reflect: true,
+        btnPrev: '.prev',
+        autoplay:false,
+        autoplayDuration:5000,
+        tilt:0,
+        shape: 'figure8'
+    });
+});
+
+<!--家长服务-->
+<div class="fuwu-cont">
+    <div class="fuwu-1"></div>
+
+    <div class="fuwu-2">
+        <div class="fuwu-div">
+            <h2>立体全方位沟通体系</h2>
+            <div class="fuwu-txt">
+                北大公学幼儿园微信微博，育儿网，幼教网，每周家园联系册，园长每月家长信，学期幼儿成长报告，每年2次家长开放周，1对1家长会/家长约谈，《父母》杂志，各类亲子/主题活动等，丰富的线上下沟通方式，构建完整实时的家园互动体系，帮助家长随时了解孩子情况，参与幼儿成长
+            </div>
+            <div class="fuwu-img"></div>
+    </div>
+
+    <div class="fuwu-3">
+        <div class="kcsz"> 
+            <h2>专业权威性家长学校</h2> 
+            <p>北大公学选派国内外知名育儿专家，讲解儿童成长与教育，家庭关系与动力，家人安全与健康等精彩话题，解决家长的实际困惑与疑问，讨论最佳育儿方式，帮助家长理解孩子，共同成长。</p> 
+        </div> 
+        <div id="gla">
+            <div id="gla_box">
+               <!--  <span class="prev">&nbsp;</span>
+               <span class="next">&nbsp;</span> -->
+                <ul>
+                    <li><div class="gla_inbox"><img src="/statics/images/youeryuan/gla1.jpg" /></div></li>
+                    <li><div class="gla_inbox"><img src="/statics/images/youeryuan/gla2.jpg" /></div></li>
+                    <li><div class="gla_inbox"><img src="/statics/images/youeryuan/gla3.jpg" /></div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--家长服务-->
