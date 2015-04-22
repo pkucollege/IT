@@ -827,3 +827,4 @@ height: 0;overflow: hidden;line-height: 0;font-size: 0;}
 .fastA-zxx li a .ico p{margin-top:5px}
 /*中小学快速链接结束*/
 
+hehe
